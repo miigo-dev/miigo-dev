@@ -11,8 +11,6 @@
   <img width="0" />
   <img src="https://skillicons.dev/icons?i=cs" height="40" alt="csharp logo"  />
   <img width="0" />
-  <img src="https://skillicons.dev/icons?i=php" height="40" alt="php logo"  />
-  <img width="0" />
   <img src="https://skillicons.dev/icons?i=visualstudio" height="40" alt="visualstudio logo"  />
   <img width="0" />
   <img src="https://skillicons.dev/icons?i=androidstudio" height="40" alt="androidstudio logo"  />
@@ -40,7 +38,6 @@
 ###
 
 - 💻 I'm currently working on a <a href="https://github.com/miigo-dev/sales-inventory-lakbay">Sales and Inventory Management System</a>
-- 🌱 Developing my skills in PHP, ML, and Cloud Security.
 - 🎹 <a href="https://www.solo.to/miigo"> I make music too!
 - ✉️ Reach me at: miigo.mnl@gmail.com
 
