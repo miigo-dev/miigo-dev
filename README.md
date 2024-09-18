@@ -37,7 +37,7 @@
 
 ###
 
-- 💻 I'm currently working on a <a href="https://github.com/miigo-dev/sales-inventory-lakbay">Sales and Inventory Management System</a>
+- 💻 I'm currently working on a <a href="https://github.com/miigo-dev/sales-inventory-js">Sales and Inventory System</a>
 - 🎹 <a href="https://www.solo.to/miigo"> I make music too!
 - ✉️ Reach me at: miigo.mnl@gmail.com
 
