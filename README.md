@@ -2,7 +2,7 @@
 
 ###
 
-<img align="right" alt="Coding" width="400" src="https://i.imgur.com/g9ZjaxG.png">
+<img align="right" alt="Coding" width="400" src="https://i.imgur.com/g9ZjaxG.png" style="margin-right: 20px;">
 
 <div align="left">
   <img src="https://skillicons.dev/icons?i=java" height="40" alt="java logo"  />
