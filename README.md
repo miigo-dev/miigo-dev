@@ -11,6 +11,8 @@
   <img width="0" />
   <img src="https://skillicons.dev/icons?i=cs" height="40" alt="csharp logo"  />
   <img width="0" />
+  <img src="https://skillicons.dev/icons?i=js" height="40" alt="csharp logo"  />
+  <img width="0" />
   <img src="https://skillicons.dev/icons?i=visualstudio" height="40" alt="visualstudio logo"  />
   <img width="0" />
   <img src="https://skillicons.dev/icons?i=androidstudio" height="40" alt="androidstudio logo"  />
