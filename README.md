@@ -43,7 +43,7 @@
 
 <div align="left">
   <img src="https://github-readme-stats.vercel.app/api?username=miigo-dev&hide_title=true&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=midnight-purple&locale=en&hide_border=false&order=1&custom_title=Github%20Stats" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=miigo-dev&locale=en&hide_title=true&layout=compact&card_width=320&langs_count=5&theme=midnight-purple&hide_border=false&order=2&custom_title=Languages" height="146" alt="languages graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=miigo-dev&locale=en&hide_title=true&layout=compact&card_width=320&langs_count=5&theme=midnight-purple&hide_border=false&order=2&custom_title=Languages" height="179" alt="languages graph"  />
   
   [![](https://visitcount.itsvg.in/api?id=miigo-dev&icon=0&color=12)](https://visitcount.itsvg.in)
 </div>
