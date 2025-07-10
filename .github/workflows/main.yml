@@ -1,63 +1,66 @@
 name: Metrics
 on:
-  schedule: [{cron: "0 0 * * *"}]
+  # 🌏 Think about the planet! No need to update stats too frequently
+  schedule: [{cron: "0 16 * * *"}]
+  # 💡 The following line lets you run workflow manually from the action tab!
   workflow_dispatch:
-  push: {branches: ["master", "main"]}
-
 jobs:
-  github-metrics:
+  metrics:
     runs-on: ubuntu-latest
-    environment: 
-      name: production
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v3
 
-      - uses: lowlighter/metrics@latest
+      - name: 🦑 Achievements
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: miigo-dev
-          template: classic
-          base: header, activity, community, repositories
-          config_timezone: UTC
-
-          plugin_languages: yes
-          plugin_languages_limit: 8
-          plugin_languages_ignored: html, css
-          plugin_languages_details: bytes-size, percentage
-
+          filename: achievements.svg
+          token: ${{ secrets.TOKEN }}
+          base: ""
+          output_action: gist
+          committer_gist: ${{ secrets.GIST }}
           plugin_achievements: yes
           plugin_achievements_display: compact
+          plugin_fortune: yes
 
-          plugin_activity: yes
-          plugin_activity_limit: 5
-          plugin_activity_days: 14
-
-          plugin_followup: yes
-          plugin_followup_sections: repositories
-          plugin_followup_indepth: yes
-
-          plugin_gists: yes
-          plugin_gists_limit: 5
-
+      - name: 🦑 General
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@latest
+        with:
+          filename: general.svg
+          token: ${{ secrets.TOKEN }}
+          base: header
+          base_indepth: yes
+          config_order: base.header, isocalendar, languages, notable, discussions, topics
+          output_action: gist
+          committer_gist: ${{ secrets.GIST }}
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-
-          plugin_projects: yes
-          plugin_projects_limit: 4
-
-          plugin_stargazers: yes
-          plugin_stargazers_charts_type: chartist
-
-          plugin_rss: yes
-          plugin_rss_limit: 4
-          plugin_rss_source: https://your-blog.com/rss
-
-      - name: Commit and push updated metrics.svg
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add metrics.svg
-          git diff --quiet && echo "No changes to commit" || git commit -m "Update metrics.svg"
-          git push
+          plugin_languages: yes
+          plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot, vue, scala, c, c++, python, ejs
+          plugin_languages_details: lines, bytes-size, percentage
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_indepth: yes
+          plugin_languages_limit: 2
+          plugin_topics: yes
+          plugin_topics_limit: 0
+          plugin_topics_mode: icons
+          plugin_notable: yes
+          plugin_discussions: yes
+          
+      - name: 🦑 Splatoon
+        uses: lowlighter/metrics@latest
+        if: ${{ success() || failure() }}
+        with:
+          filename: splatoon.svg
+          token: ${{ secrets.TOKEN }}
+          base: ""
+          output_action: gist
+          committer_gist: ${{ secrets.GIST }}
+          plugin_splatoon: yes
+          plugin_splatoon_token: ${{ secrets.SPLATOON_TOKEN }}
+          plugin_splatoon_statink: yes
+          plugin_splatoon_statink_token: ${{ secrets.SPLATOON_STATINK_TOKEN }}
+          plugin_splatoon_sections: salmon-run
+          plugin_splatoon_salmon_limit: 2
+          extras_css: |
+            h2 { display: none !important; }
+            .match:not(:last-child) { padding-bottom: 4px; }
